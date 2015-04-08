@@ -1,7 +1,6 @@
 # Goodybag Handlebars Helpers
-> A collection of useful handlebars helpers
-> for the browser or server. Pull in what you
-> need or grab all of em.
+> Lightweight collection of useful handlebars helpers
+> for the browser or server.
 
 ## Install
 
@@ -11,12 +10,30 @@ npm install gb-handlebars-helpers
 ```
 
 ## Usage
+ 
+Register the helpers:
 
 ```js
 var Handlebars = require('handlebars');
 var helpers = require('gb-handlebars-helpers');
 
-helpers.register(Handlebars); // register all helpers
+// register all the helpers
+helpers.register(Handlebars);
+
+// or cherry pick what you need
+helpers.register(Handlebars, ['truncate', 'dollars']);
+```
+
+Using helpers:
+
+```js
+// use a helper directly
+console.log(Handlebars.helpers.dollars(234)); // '2.34'
+
+// or in a template
+var templateStr = 'You balance: ${{dollars amount}}';
+var template = Handlebars.compile(templateStr);
+var output = template({ amount: 234 }); // 'Your balance: $2.34'
 ```
 
 ## API
