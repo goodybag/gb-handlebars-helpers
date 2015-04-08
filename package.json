@@ -27,5 +27,8 @@
   "homepage": "https://github.com/goodybag/handlebars-helpers",
   "devDependencies": {
     "handlebars": "^3.0.1"
+  },
+  "dependencies": {
+    "lodash": "^3.6.0"
   }
 }
