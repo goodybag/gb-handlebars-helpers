@@ -1,0 +1,35 @@
+#!/bin/sh
+
+if [ $# -eq 0 ]; then
+    echo "usage: ./add-helper <helper> to generate /lib/helpers/<helper>, /test/<helper>"
+    exit 1
+fi
+
+echo "var helpers = require('../lib/helpers');
+var assert = require('assert');
+var Hbs = require('handlebars');
+
+describe('<helper>', function() {
+  before(function() {
+    helpers.register(Hbs, '<helper>');
+  });
+
+  it('should handle is', function() {
+    assert(false);
+  });
+});
+" > ./test/$1.js
+
+echo "if ( typeof module === \"object\" && module && typeof module.exports === \"object\" ){
+  var isNode = true, define = function (factory) {
+    module.exports = factory(require, exports, module);
+  };
+}
+
+define(function(require, exports, module) {
+  module.exports = function(a, b, options){
+  };
+
+  return module.exports;
+});
+" > ./lib/helpers/$1.js
