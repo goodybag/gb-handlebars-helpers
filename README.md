@@ -58,9 +58,29 @@ Unregister using same signatures as **.register**
 
 ## Helpers
 
-* **eq**
-* **dneq**
-* truncate
+* Comparison
+  * **eq**
+  * **dneq**
+  * **lt**
+  * **lte**
+  * **gt**
+  * **gte**
+* Math
+  * multiply
+  * divide
+  * mod
+* String manipulation
+  * truncate
+  * capitalize
+  * uppercase
+  * lowercase
+* Currency
+  * dollars
+  * pennies
+* Datetime
+  * datepart
+  * timepart
+  * formatDatetime
 
 Bolded helpers can be used for conditional
 templating blocks.
