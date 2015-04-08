@@ -1,5 +1,5 @@
 {
-  "name": "handlebars-helpers",
+  "name": "gb-handlebars-helpers",
   "version": "0.0.0",
   "description": "handy handlebars helpers",
   "main": "index.js",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/goodybag/handlebars-helpers.git"
+    "url": "git://github.com/goodybag/gb-handlebars-helpers.git"
   },
   "keywords": [
     "handlebars",
@@ -22,9 +22,9 @@
   "author": "Preston Pham",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/goodybag/handlebars-helpers/issues"
+    "url": "https://github.com/goodybag/gb-handlebars-helpers/issues"
   },
-  "homepage": "https://github.com/goodybag/handlebars-helpers",
+  "homepage": "https://github.com/goodybag/gb-handlebars-helpers",
   "devDependencies": {
     "handlebars": "^3.0.1"
   },
