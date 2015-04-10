@@ -9,16 +9,21 @@ echo "var helpers = require('../lib/helpers');
 var assert = require('assert');
 var Hbs = require('handlebars');
 
-describe('<helper>', function() {
+describe('$1', function() {
   before(function() {
-    helpers.register(Hbs, '<helper>');
+    helpers.register(Hbs, '$1');
   });
 
-  it('should handle is', function() {
-    assert(false);
+  it('should handle $1 block helper', function() {
+    var str = '{{#$1 a b}}a{{else}}b{{/$1}}';
+    var template = Hbs.compile(str);
+    assert(template({ a: true, b: false}) === 'a');
   });
-});
-" > ./test/$1.js
+
+  it('should handle $1 fn', function() {
+    assert(Hbs.helpers.$1(true, false));
+  });
+});" > ./test/$1.js
 
 echo "if ( typeof module === \"object\" && module && typeof module.exports === \"object\" ){
   var isNode = true, define = function (factory) {
@@ -31,5 +36,4 @@ define(function(require, exports, module) {
   };
 
   return module.exports;
-});
-" > ./lib/helpers/$1.js
+});" > ./lib/helpers/$1.js

@@ -66,8 +66,11 @@ Unregister using same signatures as **.register**
   * **gt**
   * **gte**
 * Math
+  * add
+  * subtract
   * multiply
   * divide
+  * intDivide
   * mod
 * String manipulation
   * truncate
