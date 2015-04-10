@@ -4,7 +4,7 @@
   "description": "handy handlebars helpers",
   "main": "index.js",
   "directories": {
-    "test": "test"
+    "test": "./node_modules/.bin/mocha -R spec"
   },
   "scripts": {
     "test": "mocha"
@@ -26,7 +26,8 @@
   },
   "homepage": "https://github.com/goodybag/gb-handlebars-helpers",
   "devDependencies": {
-    "handlebars": "^3.0.1"
+    "handlebars": "^3.0.1",
+    "mocha": "^2.2.4"
   },
   "dependencies": {
     "lodash": "^3.6.0"
