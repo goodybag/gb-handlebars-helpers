@@ -1,6 +1,9 @@
 # Goodybag Handlebars Helpers
+
 > Lightweight collection of useful handlebars helpers
 > for the browser or server.
+
+[![Build Status](https://travis-ci.org/goodybag/gb-handlebars-helpers.svg?branch=master)](https://travis-ci.org/goodybag/gb-handlebars-helpers)
 
 ## Install
 
