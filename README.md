@@ -88,7 +88,7 @@ Unregister using same signatures as **.register**
 * dollars
 * pennies
 
-### Datetime
+### ~~Datetime~~ (WIP)
 
 * datepart
 * timepart
