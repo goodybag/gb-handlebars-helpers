@@ -9,7 +9,6 @@ describe('truncate', function() {
 
   it('should truncate', function() {
     var result = Hbs.helpers.truncate('abcdefghijkl', 4);
-    console.log(result);
     assert(result === 'abcd...');
   });
 
@@ -21,7 +20,6 @@ describe('truncate', function() {
   it('should truncate in a template', function() {
     var str = '{{truncate "cat dog fish bird" 6}}';
     var template = Hbs.compile(str);
-    console.log(template());
     assert(template() === 'cat do...');
   });
 });

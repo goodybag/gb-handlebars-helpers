@@ -10,7 +10,7 @@ npm install gb-handlebars-helpers
 ```
 
 ## Usage
- 
+
 Register the helpers:
 
 ```js
