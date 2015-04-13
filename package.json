@@ -1,6 +1,6 @@
 {
   "name": "gb-handlebars-helpers",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "handy handlebars helpers",
   "main": "index.js",
   "directories": {
