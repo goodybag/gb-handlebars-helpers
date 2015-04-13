@@ -62,6 +62,6 @@ describe('helper setup', function() {
 
     // assert
     assert(!result1);
-    assert(result2); 
+    assert(result2);
   });
 });
