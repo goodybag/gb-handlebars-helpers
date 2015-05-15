@@ -1,4 +1,4 @@
-var helpers = require('../lib/helpers');
+var helpers = require('../index');
 var assert = require('assert');
 var Hbs = require('handlebars');
 var opts = {
@@ -20,12 +20,11 @@ describe('helper setup', function() {
   });
 
   it('should allow plugging in all helpers', function() {
-    //helpers.unregister(Hbs);
     // Register all helpers
     helpers.register(Hbs);
 
     // Ensure all helpers are loaded
-    var keys = helpers.index;
+    var keys = Object.keys(helpers._helpers);
     assert(keys.length);
 
     keys.forEach(function(key) {

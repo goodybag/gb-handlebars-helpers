@@ -1,4 +1,4 @@
-var helpers = require('../lib/helpers');
+var helpers = require('../index');
 var assert = require('assert');
 var Hbs = require('handlebars');
 
